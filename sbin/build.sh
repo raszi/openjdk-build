@@ -230,6 +230,8 @@ configuringVersionStringParameter()
     addConfigureArg "--with-vendor-name=" "AdoptOpenJDK"
     addConfigureArg "--with-vendor-bug-url=" "https://github.com/AdoptOpenJDK/openjdk-build/issues"
 
+    addConfigureArg "--with-jvm-variants=server --with-jvm-features=link-time-opt --with-extra-cflags='-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer' --with-extra-cxxflags='-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer'"
+
     if [[ "${BUILD_CONFIG[BUILD_VARIANT]}" == "${BUILD_VARIANT_OPENJ9}" ]]; then
       addConfigureArg "--with-vendor-vm-bug-url=" "https://github.com/eclipse/openj9/issues"
     else
