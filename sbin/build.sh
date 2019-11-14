@@ -231,7 +231,7 @@ configuringVersionStringParameter()
     addConfigureArg "--with-vendor-bug-url=" "https://github.com/AdoptOpenJDK/openjdk-build/issues"
 
     # TODO add condition
-    addConfigureArg "--with-jvm-features" "link-time-opt"
+    addConfigureArg "--with-jvm-features=" "link-time-opt"
     addConfigureArg "--with-extra-cflags=" "'-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer'"
     addConfigureArg "--with-extra-cxxflags=" "'-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer'"
 
