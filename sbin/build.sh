@@ -232,8 +232,8 @@ configuringVersionStringParameter()
 
     # TODO add condition
     addConfigureArg "--with-jvm-features" "link-time-opt"
-    addConfigureArg "--with-extra-cflags" "-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer"
-    addConfigureArg "--with-extra-cxxflags" "-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer"
+    addConfigureArg "--with-extra-cflags" "'-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer'"
+    addConfigureArg "--with-extra-cxxflags" "'-Ofast -march=native -mtune=broadwell -funroll-loops -fomit-frame-pointer'"
 
     if [[ "${BUILD_CONFIG[BUILD_VARIANT]}" == "${BUILD_VARIANT_OPENJ9}" ]]; then
       addConfigureArg "--with-vendor-vm-bug-url=" "https://github.com/eclipse/openj9/issues"
